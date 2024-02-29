@@ -1,27 +1,28 @@
 preset: package
 
-namespace: VendorName\Skeleton
+namespace: MyListerHub\Skeleton
 user-auth-provider: App\User
 
 paths:
   src: src
   resource: resources
 
-factory:
-  path: database/factories
-
 migration:
   path: database/migrations
   prefix: ''
 
+factory:
+  namespace: MyListerHub\Skeleton\Database\Factories
+  path: database/factories
+
 console:
-  namespace: VendorName\Skeleton\Console
+  namespace: MyListerHub\Skeleton\Console
 
 model:
-  namespace: VendorName\Skeleton\Models
+  namespace: MyListerHub\Skeleton\Models
 
 provider:
-  namespace: VendorName\Skeleton
+  namespace: MyListerHub\Skeleton\Providers
 
 testing:
-  namespace: VendorName\Skeleton\Tests
+  namespace: MyListerHub\Skeleton\Tests

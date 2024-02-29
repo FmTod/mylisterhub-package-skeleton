@@ -1,10 +1,10 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace MyListerHub\Skeleton;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
+use MyListerHub\Skeleton\Commands\SkeletonCommand;
 
 class SkeletonServiceProvider extends PackageServiceProvider
 {
@@ -17,9 +17,8 @@ class SkeletonServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('skeleton')
-            ->hasConfigFile()
-            ->hasViews()
             ->hasMigration('create_skeleton_table')
-            ->hasCommand(SkeletonCommand::class);
+            ->hasConfigFile()
+            ->hasViews();
     }
 }

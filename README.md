@@ -18,7 +18,7 @@ This is where your description should go. Limit it to a paragraph or two. Consid
 You can install the package via composer:
 
 ```bash
-composer require :vendor_slug/:package_slug
+composer require mylisterhub/:package_slug
 ```
 
 You can publish and run the migrations with:
@@ -50,8 +50,8 @@ php artisan vendor:publish --tag=":package_slug-views"
 ## Usage
 
 ```php
-$variable = new VendorName\Skeleton();
-echo $variable->echoPhrase('Hello, VendorName!');
+$variable = new MyListerHub\Skeleton();
+echo $variable->echoPhrase('Hello, MyListerHub!');
 ```
 
 ## Testing
@@ -66,7 +66,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 ## Contributing
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](https://github.com/FmTod) for guidelines and details.
 
 ## Security Vulnerabilities
 
@@ -79,4 +79,4 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+MyListerHub Proprietary License. Please see [License File](LICENSE.md) for more information.

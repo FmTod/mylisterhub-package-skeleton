@@ -38,7 +38,7 @@ function slugify(string $subject): string
     return strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $subject), '-'));
 }
 
-function title_case(string $subject): string
+function titleCase(string $subject): string
 {
     return str_replace(' ', '', ucwords(str_replace(['-', '_'], ' ', $subject)));
 }
@@ -101,49 +101,36 @@ function determineSeparator(string $path): string
 
 function replaceForWindows(): array
 {
-    return preg_split('/\\r\\n|\\r|\\n/', run('dir /S /B * | findstr /v /i .git\ | findstr /v /i vendor | findstr /v /i '.basename(__FILE__).' | findstr /r /i /M /F:/ ":author :vendor :package VendorName skeleton migration_table_name vendor_name vendor_slug author@domain.com"'));
+    return preg_split('/\\r\\n|\\r|\\n/', run('dir /S /B * | findstr /v /i .git\ | findstr /v /i vendor | findstr /v /i '.basename(__FILE__).' | findstr /r /i /M /F:/ ":author :vendor :package MyListerHub skeleton migration_table_name vendor_name vendor_slug author@domain.com"'));
 }
 
 function replaceForAllOtherOSes(): array
 {
-    return explode(PHP_EOL, run('grep -E -r -l -i ":author|:vendor|:package|VendorName|skeleton|migration_table_name|vendor_name|vendor_slug|author@domain.com" --exclude-dir=vendor ./* ./.github/* | grep -v '.basename(__FILE__)));
+    return explode(PHP_EOL, run('grep -E -r -l -i ":author|:vendor|:package|MyListerHub|skeleton|migration_table_name|vendor_name|vendor_slug|author@domain.com" --exclude-dir=vendor ./* ./.github/* | grep -v '.basename(__FILE__)));
 }
 
-$gitName = run('git config user.name');
-$authorName = ask('Author name', $gitName);
-
-$gitEmail = run('git config user.email');
-$authorEmail = ask('Author email', $gitEmail);
+$authorName = ask('Author name', run('git config user.name'));
+$authorEmail = ask('Author email', run('git config user.email'));
 
 $usernameGuess = explode(':', run('git config remote.origin.url'))[1];
 $usernameGuess = dirname($usernameGuess);
 $usernameGuess = basename($usernameGuess);
 $authorUsername = ask('Author username', $usernameGuess);
 
-$vendorName = 'FmTod';
-$vendorSlug = slugify($vendorName);
-$vendorNamespace = str_replace('-', '', ucwords($vendorName));
-
-$currentDirectory = getcwd();
-$folderName = basename($currentDirectory);
-
-$packageName = ask('Package name', $folderName);
+$packageName = ask('Package name', basename(getcwd()));
 $packageSlug = slugify($packageName);
 $packageSlugWithoutPrefix = removePrefix('laravel-', $packageSlug);
 
-$className = title_case($packageName);
-$className = ask('Class name', $className);
-$variableName = lcfirst($className);
+$className = ask('Class name', titleCase($packageName));
 $description = ask('Package description', "This is my package {$packageSlug}");
 
 $useLaravelRay = confirm('Use Ray for debugging?', true);
 
 writeln('------');
 writeln("Author     : {$authorName} ({$authorUsername}, {$authorEmail})");
-writeln("Vendor     : {$vendorName} ({$vendorSlug})");
 writeln("Package    : {$packageSlug} <{$description}>");
-writeln("Namespace  : {$vendorNamespace}\\{$className}");
-writeln("Class name : {$className}");
+writeln("Namespace  : MyListerHub\\{$className}");
+writeln("Class Name : {$className}");
 writeln('---');
 writeln('Packages & Utilities');
 writeln('Use Ray App          : '.($useLaravelRay ? 'yes' : 'no'));
@@ -162,16 +149,13 @@ foreach ($files as $file) {
         ':author_name' => $authorName,
         ':author_username' => $authorUsername,
         'author@domain.com' => $authorEmail,
-        ':vendor_name' => $vendorName,
-        ':vendor_slug' => $vendorSlug,
-        'VendorName' => $vendorNamespace,
         ':package_name' => $packageName,
         ':package_slug' => $packageSlug,
         ':package_slug_without_prefix' => $packageSlugWithoutPrefix,
         'Skeleton' => $className,
         'skeleton' => $packageSlug,
         'migration_table_name' => titleSnake($packageSlug),
-        'variable' => $variableName,
+        'variable' => lcfirst($className),
         ':package_description' => $description,
     ]);
 

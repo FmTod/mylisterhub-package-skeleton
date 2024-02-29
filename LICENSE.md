@@ -1,21 +1,32 @@
-The MIT License (MIT)
+MyListerHub Proprietary License
 
-Copyright (c) :vendor_name <author@domain.com>
+Copyright (c) MyListerHub <support@mylisterhub.com>
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This software is the property of MyListerHub. By using, accessing, or distributing this software, you agree to the terms
+and conditions of this license.
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+1. Grant of License:<br>
+   MyListerHub grants you a non-exclusive, non-transferable license to use the software for your internal purposes only.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+2. Restrictions:<br>
+   1. You may not distribute, sublicense, sell, or otherwise transfer the software or any part of it to any third party 
+   without the express written consent of MyListerHub.
+   2. You may not modify, reverse engineer, decompile, or disassemble the software.
+
+3. Proprietary Rights:<br>
+   MyListerHub retains all intellectual property rights, including copyright, in and to the software.
+
+4. Warranty:<br>
+   THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE 
+   WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. MyListerHub DOES NOT WARRANT 
+   THAT THE SOFTWARE WILL MEET YOUR REQUIREMENTS OR THAT THE OPERATION OF THE SOFTWARE WILL BE UNINTERRUPTED OR 
+   ERROR-FREE.
+
+5. Limitation of Liability:<br>
+   IN NO EVENT SHALL MyListerHub BE LIABLE FOR ANY DAMAGES, INCLUDING WITHOUT LIMITATION, ANY INDIRECT, CONSEQUENTIAL, 
+   SPECIAL, EXEMPLARY, OR INCIDENTAL DAMAGES ARISING OUT OF OR IN CONNECTION WITH THE USE, DISTRIBUTION, OR PERFORMANCE 
+   OF THIS SOFTWARE.
+
+6. Termination:<br>
+   MyListerHub may terminate this license at any time if you fail to comply with the terms and conditions herein. Upon 
+   termination, you must cease all use of the software and destroy any copies in your possession.
