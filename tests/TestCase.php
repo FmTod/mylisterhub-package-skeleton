@@ -3,8 +3,8 @@
 namespace MyListerHub\Skeleton\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use MyListerHub\Skeleton\SkeletonServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {

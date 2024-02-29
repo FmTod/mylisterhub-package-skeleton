@@ -4,7 +4,6 @@ namespace MyListerHub\Skeleton;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use MyListerHub\Skeleton\Commands\SkeletonCommand;
 
 class SkeletonServiceProvider extends PackageServiceProvider
 {
