@@ -44,7 +44,7 @@
         "prettier": "^3.0.3",
         "resolve-url-loader": "^5.0.0",
         "sass": "^1.64.2",
-        "sass-loader": "^13.3.2",
+        "sass-loader": "^14.0.0",
         "terser": "^5.19.4",
         "ts-loader": "^9.4.4",
         "typescript": "^5.2.2",
