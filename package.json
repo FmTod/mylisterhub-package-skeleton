@@ -32,7 +32,7 @@
         "husky": "^8.0.3",
         "semantic-release": "^21.0.7",
         "@types/axios": "^0.14.0",
-        "@types/eslint": "^8.44.8",
+        "@types/eslint": "^9.0.0",
         "@types/node": "^20.5.9",
         "@vitejs/plugin-vue2": "^2.3.1",
         "@vue/eslint-config-prettier": "^8.0.0",
