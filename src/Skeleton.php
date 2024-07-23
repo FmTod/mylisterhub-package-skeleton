@@ -2,6 +2,4 @@
 
 namespace MyListerHub\Skeleton;
 
-class Skeleton
-{
-}
+class Skeleton {}
