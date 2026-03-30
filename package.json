@@ -23,7 +23,7 @@
     },
     "dependencies": {
         "mdb4-vue": "github:FmTod2/mdb4-vue-pro",
-        "vue": "^2.7.0"
+        "vue": "^3.0.0"
     },
     "devDependencies": {
         "@commitlint/cli": "^17.6.6",
